@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search For Hospitals</title>
+    <style>
+        .menu-bar
+        {
+            background-color: rgb(31, 29, 29);
+            font-size: large;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+        }
+        ul.main-menu,ul.sub-menu
+        {
+            list-style-type: none;
+        }
+        ul.main-menu>li
+        {
+            display: inline-block;
+            padding: 30px;
+        }
+        ul.main-menu>li a
+        {
+            color: white;
+            padding:20px;
+        }
+        ul.sub-menu
+        {
+            display: none;
+            max-width:200px;
+            position: absolute;
+            top: 70px;
+            background-color: rgb(94, 88, 88);
+        }
+        ul.sub-menu>li
+        {
+            padding:20px;
+        }
+        ul.sub-menu>li a
+        {
+            color: white;
+        }
+        .dropdown:hover .sub-menu
+        {
+            display: block;
+        }
+        body
+        {
+            background-color: rgb(161, 223, 136);
+        }
+        .main-container
+        {
+            background-color: white;
+            align-items: center;
+            font-style: italic;
+        }
+        table
+        {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            margin: 150px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <a> 
+    <img src="Screenshot top.png" height="125px"></a>
+    <div class="menu-bar">
+        <ul class="main-menu">
+            <li><a href="1.html">Home</a></li>
+            <li class="dropdown"><a href="">Services</a>
+                <ul class="sub-menu">
+                    <li><a href="Searchforhospitals.html">Search for Hospitals</a></li>
+                    <li><a href="Bookanappointment.html">Book an Appointment</a></li>
+                    
+                </ul>
+            </li>
+            <li><a href="">Patient Guide</a></li>
+            <li><a href="faq.html">FAQ's</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <table class="main-container" cellpadding="20px">
+        <tr><td><h1>Please Enter the Details</h1></td></tr>
+        <tr><td>
+    <label for="city">Select Your City:</label>
+    <select id="city" name="city">
+        <option value="Select">Select</option>
+        <option value="Hubballi-Dharwad">Hubballi-Dharwad</option>
+        <option value="Bengaluru">Bengaluru</option>
+        <option value="Vijaypura">Vijaypura</option>
+        <option value="Belagavi">Belagavi</option>
+        <option value="Ballari">Ballari</option>
+        <option value="Gadag">Gadag</option>
+    </td></tr>
+    </select>
+<tr><td>
+    <button onclick="redirectBasedOnSelection()"><img src="search.png" height="40px"></button></td></tr></td></tr>
+
+    <script>
+        function redirectBasedOnSelection() {
+            var selectedCity = document.getElementById("city").value;
+
+            
+            window.location.href = selectedCity + ".html";
+        }
+    </script>
+    </div>
+</table>
+</body>
+</html>
